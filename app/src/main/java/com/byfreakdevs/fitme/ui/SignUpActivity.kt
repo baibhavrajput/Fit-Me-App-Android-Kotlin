@@ -6,15 +6,15 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
+import com.byfreakdevs.fitme.R
+import com.byfreakdevs.fitme.databinding.ActivitySignUpBinding
 import com.byfreakdevs.fitme.utlis.User
-import com.byfreakdevs.fitme.fragmentsHomeActivity.WeightFragment
-import com.byfreakdevs.fitme.databinding.ActivitySignUp2Binding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class SignUpActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySignUp2Binding
+    private lateinit var binding: ActivitySignUpBinding
 
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var database: DatabaseReference
@@ -27,7 +27,7 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUp2Binding.inflate(layoutInflater)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         /** Initialize Firebase Auth */
@@ -105,9 +105,6 @@ class SignUpActivity : AppCompatActivity() {
         val userEmail = firebaseAuth.currentUser!!.email
         val userName = binding.etNameSignUp.text.toString()
         val userId = binding.etUserNameSignUp.text.toString()
-
-        val intent = Intent(this , WeightFragment::class.java)
-        intent.putExtra("userName" , userName)
 
         database = FirebaseDatabase.getInstance().getReference("Users")
         val user = User(userName, userId, userEmail, userFirebaseId)

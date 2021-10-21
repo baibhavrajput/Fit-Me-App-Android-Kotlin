@@ -10,19 +10,18 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.byfreakdevs.fitme.Communicator
-import com.byfreakdevs.fitme.fragmentsHomeActivity.ReportsFragment
 import com.byfreakdevs.fitme.R
-import com.byfreakdevs.fitme.databinding.ActivityHome2Binding
+import com.byfreakdevs.fitme.databinding.ActivityHomeBinding
+import com.byfreakdevs.fitme.fragmentsHomeActivity.ReportsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class HomeActivity : AppCompatActivity(), Communicator {
 
-    private lateinit var binding: ActivityHome2Binding
+    private lateinit var binding: ActivityHomeBinding
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var firebaseAuth : FirebaseAuth
     private val rootReference = Firebase.database.reference
@@ -32,7 +31,7 @@ class HomeActivity : AppCompatActivity(), Communicator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHome2Binding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         drawerLayout = binding.drawerLayout
@@ -113,7 +112,7 @@ class HomeActivity : AppCompatActivity(), Communicator {
         val inflater = menuInflater
         inflater.inflate(R.menu.options_menu, menu)
 
-//        this.menu = menu!!
+        //this.menu = menu!!
         return true
     }
 
@@ -150,4 +149,3 @@ class HomeActivity : AppCompatActivity(), Communicator {
 
 
 }
-

@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
-import com.byfreakdevs.fitme.databinding.ActivitySignIn2Binding
-//import androidx.room.RoomDatabase
+import com.byfreakdevs.fitme.R
+import com.byfreakdevs.fitme.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class SignInActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySignIn2Binding
+    private lateinit var binding: ActivitySignInBinding
 
     private lateinit var firebaseAuth : FirebaseAuth
     private var email = ""
@@ -22,7 +22,7 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignIn2Binding.inflate(layoutInflater)
+        binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //database = Room.databaseBuilder(applicationContext , NutritionDatabase::class.java , "nutritionDB").build()
