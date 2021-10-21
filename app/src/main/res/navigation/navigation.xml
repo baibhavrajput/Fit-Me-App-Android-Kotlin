@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.byfreakdevs.fitme.fragmentsHomeActivity.DashboardFragment"
+        android:label="Fit Me"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.byfreakdevs.fitme.fragmentsHomeActivity.WorkoutFragment"
+        android:label="Workout"
+        tools:layout="@layout/fragment_workout" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.byfreakdevs.fitme.fragmentsHomeActivity.ReportsFragment"
+        android:label="Reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/weightFragment"
+        android:name="com.byfreakdevs.fitme.fragmentsHomeActivity.WeightFragment"
+        android:label="Weight"
+        tools:layout="@layout/fragment_weight" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.byfreakdevs.fitme.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+</navigation>

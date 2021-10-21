@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nameNavDrawer"
+        android:icon="@drawable/profile_icon"
+        android:title="Name" />
+    <item
+        android:id="@+id/emailNavDrawer"
+        android:icon="@drawable/ic_baseline_email_24"
+        android:title="Email" />
+    <item
+        android:id="@+id/userNameNavDrawer"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="User Name" />
+
+    <item
+        android:id="@+id/userIdNavDrawer"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="User Id" />
+
+    <item
+        android:title="Extras">
+        <menu>
+
+            <item
+                android:id="@+id/SettingsNavDrawer"
+                android:title="Settings"
+                android:icon="@drawable/settings_icon"/>
+
+            <item
+                android:id="@+id/themeNavDrawer"
+                android:icon="@drawable/workout_icon"
+                android:title="Theme"/>
+
+            <item
+                android:icon="@drawable/signout_icon"
+                android:id="@+id/signOutNavDrawer"
+                android:title="Sign Out"
+                />
+
+        </menu>
+    </item>
+</menu>
