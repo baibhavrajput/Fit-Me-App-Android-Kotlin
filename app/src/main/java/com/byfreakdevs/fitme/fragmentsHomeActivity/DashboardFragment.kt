@@ -117,7 +117,7 @@ class DashboardFragment : Fragment() {
                 carbohydrates = item.carbohydrates_total_g
                 fatsSaturated = item.fat_saturated_g
                 fiber = item.fiber_g
-                name = item.name
+                name = foodSearched
                 protein = item.protein_g
                 sugar = item.sugar_g
                 cholesterol = item.cholesterol_mg
