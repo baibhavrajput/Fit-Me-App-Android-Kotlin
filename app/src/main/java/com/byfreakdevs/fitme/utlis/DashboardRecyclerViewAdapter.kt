@@ -8,43 +8,31 @@ import androidx.recyclerview.widget.RecyclerView
 import com.byfreakdevs.fitme.R
 import com.byfreakdevs.fitme.models.Item
 
-class DashboardRecyclerViewAdapter  : RecyclerView.Adapter<DashboardRecyclerViewAdapter.ViewHolder>()  {
+class DashboardRecyclerViewAdapter (private val foodDetailsArrayList: ArrayList<FoodDetails>)
+    : RecyclerView.Adapter<DashboardRecyclerViewAdapter.FoodDetailsHolder>() {
 
-    private val mList = ArrayList<Item>()
-
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.dashboard_recyclerview_items , parent , false)
-        return ViewHolder(view)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): FoodDetailsHolder {
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.dashboard_recyclerview_items, viewGroup, false)
+        return FoodDetailsHolder(view)
     }
 
-    override fun onBindViewHolder(holder: DashboardRecyclerViewAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(foodDetailsHolder: FoodDetailsHolder, i: Int) {
 
-        val item = mList[position]
+        val currentFood = foodDetailsArrayList[i]
+        foodDetailsHolder.tvFood.text = currentFood.name
+        foodDetailsHolder.tvCalories.text = currentFood.calories.toString()
 
-        holder.food.text = item.name
-        holder.calories.text = item.calories.toString()
     }
 
     override fun getItemCount(): Int {
-        return mList.size
+        return foodDetailsArrayList.size
     }
 
+    class FoodDetailsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    fun setFoodList(food: List<Item>) {
-        mList.clear()
-        mList.addAll(food)
-        notifyDataSetChanged()
-    }
-
-
-
-    class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-
-        val food: TextView = itemView.findViewById(R.id.tvFood)
-        val calories: TextView = itemView.findViewById(R.id.tvCalories)
+        var tvFood: TextView = itemView.findViewById(R.id.tvFood)
+        var tvCalories: TextView = itemView.findViewById(R.id.tvCalories)
 
     }
+
 }

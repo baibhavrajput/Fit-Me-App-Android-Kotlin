@@ -1,64 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragmentsHomeActivity.WeightFragment">
 
-
-    <EditText
-        android:id="@+id/etDate"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:hint="Enter date"
-        android:padding="4dp"/>
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/etWeight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDate"
-        android:hint="Enter Weight in Kg"
-        android:padding="4dp"/>
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter date here" />
 
-    <Button
-        android:id="@+id/btSaveWeight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="Save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter weight here " />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Save" />
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewWeight"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btSaveWeight" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".fragmentsHomeActivity.WeightFragment">-->
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/etDate"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Enter date"-->
+<!--        android:inputType="date"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:padding="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etWeight"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Enter Weight in Kg"-->
+<!--        android:inputType="number"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:padding="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/etDate" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btSaveWeight"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:text="Save"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/etWeight" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/items_list"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btSaveWeight" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

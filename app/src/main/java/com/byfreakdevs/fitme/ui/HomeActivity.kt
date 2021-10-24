@@ -9,7 +9,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import com.byfreakdevs.fitme.Communicator
 import com.byfreakdevs.fitme.R
 import com.byfreakdevs.fitme.databinding.ActivityHomeBinding
 import com.byfreakdevs.fitme.fragmentsHomeActivity.ReportsFragment
@@ -19,14 +18,12 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class HomeActivity : AppCompatActivity(), Communicator {
+class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var firebaseAuth : FirebaseAuth
     private val rootReference = Firebase.database.reference
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -134,18 +131,5 @@ class HomeActivity : AppCompatActivity(), Communicator {
         return super.onOptionsItemSelected(item)
 
     }
-
-    override fun passDataCom(totalCarbs: Double) {
-        val bundle = Bundle()
-        bundle.putDouble("totalCarbs" , totalCarbs)
-
-        val transaction = this.supportFragmentManager.beginTransaction()
-        val reportsFragment = ReportsFragment()
-
-        transaction.replace(R.id.fragmentContainerViewHome , reportsFragment)
-        transaction.commit()
-
-    }
-
 
 }

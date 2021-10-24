@@ -1,19 +1,34 @@
 package com.byfreakdevs.fitme.fragmentsHomeActivity
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.byfreakdevs.fitme.R
+import androidx.fragment.app.Fragment
 import com.byfreakdevs.fitme.databinding.FragmentReportsBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+
 
 class ReportsFragment : Fragment() {
+    private var sumCalories : Double?  = 0.0
+    private var sumCarbohydrates : Double? = 0.0
+    private var sumProtein : Double? = 0.0
+    private var sumFatsSaturated : Double? = 0.0
+    private var sumFiber : Double? = 0.0
+    private var sumCholesterol : Int? = 0
+    private var sumSodium : Int? = 0
+    private var sumSugar : Double? = 0.0
+
 
     private lateinit var binding: FragmentReportsBinding
-
-    var totalCarbsDisplay: Double? = 0.0
-
+    private var currentUser: FirebaseUser? = null
+    private val rootReference = Firebase.database.reference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,16 +42,126 @@ class ReportsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        totalCarbsDisplay = arguments?.getDouble("key" )
+        currentUser = FirebaseAuth.getInstance().currentUser
 
-//        val bundle = this.arguments
+        val userReference = rootReference.child("Users").child(currentUser!!.uid)
 
-//        if (totalCarbsDisplay != null) {
-        // handle your code here.
-        binding.tvReports.text = totalCarbsDisplay.toString()
-//        }
+        userReference.child("nutritionDetails").orderByChild("calories").addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumCalories = sumCalories?.plus(
+                            data.child("calories")
+                                .getValue(Double::class.java)!!
+                        )
+                    }
+                    binding.tvCaloriesReports.text = sumCalories.toString()
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        userReference.child("nutritionDetails").orderByChild("carbohydrates").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumCarbohydrates = sumCarbohydrates?.plus(
+                        data.child("carbohydrates")
+                            .getValue(Double::class.java)!!
+                    )
+                }
+                binding.tvCarbohydratesReports.text = sumCarbohydrates.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        userReference.child("nutritionDetails").orderByChild("protein").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumProtein = sumProtein?.plus(
+                        data.child("protein")
+                            .getValue(Double::class.java)!!
+                    )
+                }
+                binding.tvProteinReports.text = sumProtein.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        userReference.child("nutritionDetails").orderByChild("fatsSaturated").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumFatsSaturated = sumFatsSaturated?.plus(
+                        data.child("fatsSaturated")
+                            .getValue(Double::class.java)!!
+                    )
+                }
+                binding.tvTotalFatsReports.text = sumFatsSaturated.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        userReference.child("nutritionDetails").orderByChild("fiber").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumFiber = sumFiber?.plus(
+                        data.child("fiber")
+                            .getValue(Double::class.java)!!
+                    )
+                }
+                binding.tvFiberReports.text = sumFiber.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        userReference.child("nutritionDetails").orderByChild("cholesterol").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumCholesterol = sumCholesterol?.plus(
+                        data.child("cholesterol")
+                            .getValue(Int::class.java)!!
+                    )
+                }
+                binding.tvCholesterolReports.text = sumCholesterol.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        userReference.child("nutritionDetails").orderByChild("sodium").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumSodium = sumSodium?.plus(
+                        data.child("sodium")
+                            .getValue(Int::class.java)!!
+                    )
+                }
+                binding.tvSodiumReports.text = sumSodium.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        userReference.child("nutritionDetails").orderByChild("sugar").addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumSugar = sumSugar?.plus(
+                        data.child("sugar")
+                            .getValue(Double::class.java)!!
+                    )
+                }
+                binding.tvSugarReports.text = sumSugar.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
 
 
-//        binding.tvReports.text = totalCarbsDisplay.toString()
+
+
     }
+
+
 }
