@@ -41,15 +41,75 @@
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+    <Button
+        android:id="@+id/btDeleteDashboard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Delete All Entries"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewDashboard"
+        app:layout_constraintEnd_toEndOf="@+id/btGetCaloriesDashboard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btGetCaloriesDashboard"
+        app:layout_constraintTop_toBottomOf="@+id/btGetCaloriesDashboard" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewDashboard"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
         app:layout_constraintEnd_toEndOf="@+id/btGetCaloriesDashboard"
         app:layout_constraintStart_toStartOf="@+id/btGetCaloriesDashboard"
-        app:layout_constraintTop_toBottomOf="@+id/btGetCaloriesDashboard" >
+        app:layout_constraintTop_toBottomOf="@+id/btDeleteDashboard">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewDashboard"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewDashboard"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:text="Total"
+            android:textSize="20sp"
+            android:paddingStart="4dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvTotalDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:textAlignment="textEnd"
+            android:textSize="20sp"
+            android:text="0.00"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="KCal"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,32 +7,101 @@
     tools:context=".fragmentsHomeActivity.ReportsFragment"
     >
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nutrients"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout0"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <TextView
+            android:id="@+id/textView122"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Nutrient"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:text="Total"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="Unit"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout0"
+        android:weightSum="100">
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Calories" />
+            android:layout_weight="40"
+            android:text="Calories"
+            android:textSize="16sp"
+            />
 
         <TextView
             android:id="@+id/tvCaloriesReports"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="KCal"
+            android:textSize="16sp"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -43,23 +112,39 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
+        android:weightSum="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        >
 
         <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Carbohydrates" />
+            android:id="@+id/tv4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Carbohydrates"
+            android:textSize="16sp"
+            />
 
         <TextView
             android:id="@+id/tvCarbohydratesReports"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="g"
+            android:textSize="16sp"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -72,21 +157,33 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        android:weightSum="100">
 
         <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Protein" />
+            android:id="@+id/tv7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Protein"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvProteinReports"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="g"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -99,21 +196,33 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout3"
+        android:weightSum="100">
 
         <TextView
-            android:id="@+id/textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Saturated Fats" />
+            android:id="@+id/tv10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Saturated Fats"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tvTotalFatsReports"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvSaturatedFatsReports"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="g"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -126,21 +235,33 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout4">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout4"
+        android:weightSum="100">
 
         <TextView
-            android:id="@+id/textView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Fiber" />
+            android:id="@+id/tv13"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Fiber"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvFiberReports"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="g"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -153,21 +274,33 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout5">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout5"
+        android:weightSum="100">
 
         <TextView
-            android:id="@+id/textView33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Cholesterol" />
+            android:id="@+id/tv16"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Cholesterol"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvCholesterolReports"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="g"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -183,18 +316,29 @@
         app:layout_constraintTop_toBottomOf="@id/linearLayout6">
 
         <TextView
-            android:id="@+id/textView191"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sodium" />
+            android:id="@+id/tv19"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Sodium"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvSodiumReports"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="mg"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -210,17 +354,30 @@
         app:layout_constraintTop_toBottomOf="@id/linearLayout7">
 
         <TextView
-            android:id="@+id/textView192"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sugar" />
+            android:id="@+id/tv22"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:text="Sugar"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvSugarReports"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="0.0" />
+            android:layout_weight="40"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="g"
+            android:textSize="16sp" />
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

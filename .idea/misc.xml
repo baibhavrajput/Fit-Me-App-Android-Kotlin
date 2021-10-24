@@ -19,7 +19,7 @@
         <entry key="app/src/main/res/layout/fragment_biceps2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_chest.xml" value="0.13779128672745694" />
         <entry key="app/src/main/res/layout/fragment_chest2.xml" value="0.13779128672745694" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_dashboard2.xml" value="0.13779128672745694" />
         <entry key="app/src/main/res/layout/fragment_legs.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_legs2.xml" value="0.14488348530901723" />
@@ -36,6 +36,7 @@
         <entry key="app/src/main/res/layout/navdrawer_header.xml" value="0.29791666666666666" />
         <entry key="app/src/main/res/layout/row_items.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/weight_list_items.xml" value="0.14488348530901723" />
+        <entry key="app/src/main/res/layout/weight_recyclerview_items.xml" value="0.17481884057971014" />
         <entry key="app/src/main/res/menu/home_bottom_menu.xml" value="0.25277777777777777" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.25277777777777777" />
         <entry key="app/src/main/res/menu/navdrawer_menu.xml" value="0.25277777777777777" />

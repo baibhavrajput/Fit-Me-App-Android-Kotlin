@@ -54,7 +54,8 @@ class ReportsFragment : Fragment() {
                                 .getValue(Double::class.java)!!
                         )
                     }
-                    binding.tvCaloriesReports.text = sumCalories.toString()
+                    val rounded = String.format("%.2f", sumCalories)
+                    binding.tvCaloriesReports.text = rounded.toString()
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {}
@@ -68,7 +69,8 @@ class ReportsFragment : Fragment() {
                             .getValue(Double::class.java)!!
                     )
                 }
-                binding.tvCarbohydratesReports.text = sumCarbohydrates.toString()
+                val rounded = String.format("%.2f", sumCarbohydrates)
+                binding.tvCarbohydratesReports.text = rounded.toString()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {}
@@ -82,7 +84,8 @@ class ReportsFragment : Fragment() {
                             .getValue(Double::class.java)!!
                     )
                 }
-                binding.tvProteinReports.text = sumProtein.toString()
+                val rounded = String.format("%.2f", sumProtein)
+                binding.tvProteinReports.text = rounded.toString()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {}
@@ -96,7 +99,8 @@ class ReportsFragment : Fragment() {
                             .getValue(Double::class.java)!!
                     )
                 }
-                binding.tvTotalFatsReports.text = sumFatsSaturated.toString()
+                val rounded = String.format("%.2f", sumFatsSaturated)
+                binding.tvSaturatedFatsReports.text = rounded.toString()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {}
@@ -110,7 +114,8 @@ class ReportsFragment : Fragment() {
                             .getValue(Double::class.java)!!
                     )
                 }
-                binding.tvFiberReports.text = sumFiber.toString()
+                val rounded = String.format("%.2f", sumFiber)
+                binding.tvFiberReports.text = rounded.toString()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {}
@@ -152,7 +157,8 @@ class ReportsFragment : Fragment() {
                             .getValue(Double::class.java)!!
                     )
                 }
-                binding.tvSugarReports.text = sumSugar.toString()
+                val rounded = String.format("%.2f", sumSugar)
+                binding.tvSugarReports.text = rounded.toString()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {}

@@ -1,5 +1,6 @@
 package com.byfreakdevs.fitme.fragmentsHomeActivity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import com.byfreakdevs.fitme.databinding.FragmentDashboardBinding
 import com.byfreakdevs.fitme.models.Item
 import com.byfreakdevs.fitme.networking.FoodService
 import com.byfreakdevs.fitme.repository.FoodRepository
+import com.byfreakdevs.fitme.ui.HomeActivity
 import com.byfreakdevs.fitme.utlis.FoodDetails
 import com.byfreakdevs.fitme.utlis.DashboardRecyclerViewAdapter
 import com.byfreakdevs.fitme.utlis.NutritionDetails
@@ -23,6 +25,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.util.ArrayList
@@ -38,6 +41,7 @@ class DashboardFragment : Fragment() {
     private var sodium = 0
     private var sugar = 0.0
     private var name = ""
+    private var sumCalories = 0.0
 
     private lateinit var recyclerView: RecyclerView
     private var foodDetailsArrayList = ArrayList<FoodDetails>()
@@ -70,6 +74,32 @@ class DashboardFragment : Fragment() {
 
         val foodService = FoodService.getInstance()
         val foodRepository = FoodRepository(foodService)
+
+        binding.btDeleteDashboard.setOnClickListener {
+//            userReference.child("foodDetails").removeValue()
+//            userReference.child("nutritionDetails").removeValue()
+            userReference.child("nutritionDetails").addValueEventListener(object :
+                ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    dataSnapshot.ref.removeValue()
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
+
+            userReference.child("foodDetails").addValueEventListener(object :
+                ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    dataSnapshot.ref.removeValue()
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
+
+            recyclerViewAdapter.notifyDataSetChanged()
+
+        }
+
 
         binding.btGetCaloriesDashboard.setOnClickListener {
 
@@ -124,6 +154,22 @@ class DashboardFragment : Fragment() {
             override fun onCancelled(databaseError: DatabaseError) {
 
             }
+        })
+
+        userReference.child("nutritionDetails").orderByChild("calories").addValueEventListener(object :
+            ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (data in dataSnapshot.children) {
+                    sumCalories = sumCalories?.plus(
+                        data.child("calories")
+                            .getValue(Double::class.java)!!
+                    )
+                }
+                val rounded = String.format("%.2f", sumCalories)
+                binding.tvTotalDashboard.text = rounded.toString()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
         })
 
     }

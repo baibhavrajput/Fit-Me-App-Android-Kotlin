@@ -2,22 +2,36 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="100">
 
     <TextView
-        android:layout_weight="1"
+        android:layout_weight="40"
         android:layout_margin="5dp"
         android:id="@+id/tvDate"
         android:textSize="25sp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:layout_weight="1"
+        android:layout_weight="40"
         android:layout_margin="5dp"
         android:textSize="25sp"
         android:id="@+id/tvWeight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        />
+
+    <TextView
+        android:layout_weight="20"
+        android:layout_margin="5dp"
+        android:textSize="25sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="kg"
+        />
+
 
 </LinearLayout>

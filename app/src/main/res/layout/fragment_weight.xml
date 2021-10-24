@@ -15,27 +15,35 @@
             android:id="@+id/etDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter date here" />
+            android:hint="Enter date here"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
 
         <EditText
             android:id="@+id/etWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter weight here " />
+            android:hint="Enter weight here "
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
 
         <Button
             android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Save" />
+            android:text="Save"
+            android:layout_margin="8dp"
+            />
 
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"/>
 
 </LinearLayout>
 <!--<?xml version="1.0" encoding="utf-8"?>-->
