@@ -2,27 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_margin="4dp">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FeedbackFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        tools:text="Date"
-        android:padding="4dp"
         android:textSize="20sp"
-        />
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:fontFamily="@font/adamina"
+        android:text="Feel free to give your valuable feedback on :" />
 
     <TextView
-        android:id="@+id/tvWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        tools:text="Weight"
-        android:padding="4dp"
         android:textSize="20sp"
-        />
+        android:fontFamily="@font/adamina"
+        android:padding="8dp"
+        android:text="baibhavrajputt@gmail.com"/>
+
+
 </LinearLayout>

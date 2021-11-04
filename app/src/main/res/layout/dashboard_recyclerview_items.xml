@@ -3,24 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_margin="8dp">
+    android:layout_margin="4dp"
+    android:weightSum="100"
+    android:background="@drawable/nutrients_background">
 
     <TextView
         android:id="@+id/tvFood"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="TextView"
-        android:padding="4dp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_weight="70"
+        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/main_color"
+        />
 
     <TextView
         android:id="@+id/tvCalories"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="30"
         android:text="TextView"
-        android:padding="4dp"
+        android:padding="8dp"
         android:textSize="20sp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
 </LinearLayout>

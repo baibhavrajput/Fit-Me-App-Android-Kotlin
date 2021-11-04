@@ -62,7 +62,7 @@ class SignUpActivity : AppCompatActivity() {
             binding.etPasswordSignUp.error = "Please enter password"
         } else if (TextUtils.isEmpty(confirmPassword)) {
             binding.etConfirmPasswordSignUp.error = "Please confirm password"
-        } else if (password.length < 3) {
+        } else if (password.length < 6) {
             binding.etPasswordSignUp.error = "Password must at least be 8 characters long"
         } else if (confirmPassword != password) {
             binding.etConfirmPasswordSignUp.error = "Please enter same password"

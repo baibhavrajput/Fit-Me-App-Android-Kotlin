@@ -41,6 +41,9 @@ class SignInActivity : AppCompatActivity() {
         binding.btnSignIn.setOnClickListener {
             validateData()
         }
+        binding.tvForgotPasswordSingIn.setOnClickListener {
+            startActivity(Intent(this , ForgetPasswordActivity :: class.java))
+        }
 
     }
     /** Validate users SignIn data*/

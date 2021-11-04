@@ -2,42 +2,64 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nameNavDrawer"
-        android:icon="@drawable/profile_icon"
-        android:title="Name" />
+        android:id="@+id/homeNavDrawer"
+        android:icon="@drawable/dashboard_icon"
+        android:title="Home" />
     <item
-        android:id="@+id/emailNavDrawer"
-        android:icon="@drawable/ic_baseline_email_24"
-        android:title="Email" />
+        android:id="@+id/workoutNavDrawer"
+        android:icon="@drawable/workout_icon"
+        android:title="Workout" />
     <item
-        android:id="@+id/userNameNavDrawer"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="User Name" />
+        android:id="@+id/reportsNavDrawer"
+        android:icon="@drawable/reports_icon"
+        android:title="Reports" />
 
     <item
-        android:id="@+id/userIdNavDrawer"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="User Id" />
+        android:id="@+id/weightNavDrawer"
+        android:icon="@drawable/weight_icon"
+        android:title="Weight" />
 
     <item
-        android:title="Extras">
+        android:title="User Info">
         <menu>
 
             <item
-                android:id="@+id/SettingsNavDrawer"
-                android:title="Settings"
-                android:icon="@drawable/settings_icon"/>
+                android:id="@+id/profileNavDrawer"
+                android:title="Profile"
+                android:icon="@drawable/profile_icon"/>
 
-            <item
-                android:id="@+id/themeNavDrawer"
-                android:icon="@drawable/workout_icon"
-                android:title="Theme"/>
+<!--            <item-->
+<!--                android:id="@+id/updatePasswordNavDrawer"-->
+<!--                android:icon="@drawable/update_password_icon"-->
+<!--                android:title="Update Password"/>-->
 
             <item
                 android:icon="@drawable/signout_icon"
                 android:id="@+id/signOutNavDrawer"
                 android:title="Sign Out"
                 />
+
+        </menu>
+    </item>
+
+    <item
+        android:title="More">
+        <menu>
+
+            <item
+                android:id="@+id/settingsNavDrawer"
+                android:title="Settings"
+                android:icon="@drawable/settings_icon"/>
+
+            <item
+                android:id="@+id/feedbackNavDrawer"
+                android:icon="@drawable/feedback_icon"
+                android:title="Feedback"/>
+
+            <item
+                android:id="@+id/aboutNavDrawer"
+                android:icon="@drawable/about_icon"
+                android:title="About"/>
 
         </menu>
     </item>

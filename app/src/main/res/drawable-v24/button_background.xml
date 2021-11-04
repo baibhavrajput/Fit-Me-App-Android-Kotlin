@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape>
-            <gradient
-                android:endColor="@android:color/transparent"
-                android:startColor="@android:color/transparent" />
-            <corners android:radius="5dp"/>
-            <stroke android:color="@color/white" android:width="3dp"/>
+
+    <item android:state_pressed="true" >
+        <shape android:shape="rectangle"  >
+            <corners android:radius="5dp" />
+            <stroke android:width="3dp" android:color="#FFFFFF" />
+            <gradient android:angle="-90" android:startColor="@color/purple_500" android:endColor="@color/purple_700"  />
         </shape>
     </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle"  >
+            <corners android:radius="5dp" />
+            <stroke android:width="3dp" android:color="#FFFFFF" />
+            <solid android:color="@color/purple_500"/>
+        </shape>
+    </item>
+    <item >
+        <shape android:shape="rectangle"  >
+            <corners android:radius="5dp" />
+            <stroke android:width="3dp" android:color="#FFFFFF" />
+            <solid android:color="@color/main_color"/>
+<!--            <gradient android:angle="-90" android:startColor="@color/purple_200" android:endColor="@color/purple_500" />-->
+        </shape>
+    </item>
+<!--    <item>-->
+<!--        <shape>-->
+<!--&lt;!&ndash;            <gradient&ndash;&gt;-->
+<!--&lt;!&ndash;                android:endColor="@android:color/transparent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:startColor="@android:color/transparent" />&ndash;&gt;-->
+<!--            <corners android:radius="10dp"/>-->
+<!--&lt;!&ndash;            <stroke android:color="@color/white" android:width="3dp"/>&ndash;&gt;-->
+<!--        </shape>-->
+<!--    </item>-->
 
 </selector>

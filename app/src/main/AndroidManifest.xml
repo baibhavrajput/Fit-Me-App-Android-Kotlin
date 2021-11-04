@@ -12,22 +12,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitMe">
         <activity
-            android:name=".ui.HomeActivity"
+            android:name=".ui.ForgetPasswordActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.SignUpActivity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".ui.SignInActivity"
-            android:exported="true" >
+            android:name=".ui.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <activity -->
+        <activity
+            android:name=".ui.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.SignInActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity> <!-- <activity -->
         <!-- android:name=".MainActivity" -->
         <!-- android:exported="true"> -->
         <!-- <intent-filter> -->

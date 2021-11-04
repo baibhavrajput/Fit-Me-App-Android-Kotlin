@@ -10,7 +10,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#946F80E8"/>
+        android:background="#CC6495ED"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -157,7 +157,7 @@
                 app:layout_constraintStart_toStartOf="@+id/etPasswordSignUp"
                 app:layout_constraintTop_toBottomOf="@+id/etPasswordSignUp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSignUp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

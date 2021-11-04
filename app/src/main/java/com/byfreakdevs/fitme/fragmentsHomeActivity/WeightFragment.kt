@@ -35,8 +35,6 @@ class WeightFragment : Fragment() {
     private lateinit var btnSave: Button
     private var weightDetailsArrayList = ArrayList<WeightDetails>()
     private var currentUser: FirebaseUser? = null
-    var RC_SIGN_IN: Int = 1234
-    private var response: IdpResponse? = null
     var TAG : String = "TAG"
     private lateinit var binding: FragmentWeightBinding
     private val rootReference = Firebase.database.reference
@@ -71,35 +69,36 @@ class WeightFragment : Fragment() {
 
         val userReference = rootReference.child("Users").child(currentUser!!.uid)
 
-            btnSave.setOnClickListener {
-                userReference.child("weightDetails").push()
-                    .setValue(WeightDetails(etDate.text.toString(), etWeight.text.toString())) }
+        btnSave.setOnClickListener {
+            userReference.child("weightDetails").push()
+                .setValue(WeightDetails(etDate.text.toString(), etWeight.text.toString()))
 
-            userReference.child("weightDetails").addChildEventListener(object : ChildEventListener {
+            etWeight.text.clear()
+            etDate.text.clear()
+        }
 
-                override fun onChildAdded(dataSnapshot: DataSnapshot, s: String?) {
+        userReference.child("weightDetails").addChildEventListener(object : ChildEventListener {
 
-                    val weightDetails = dataSnapshot.getValue(WeightDetails::class.java)
-                    weightDetailsArrayList.add(WeightDetails(weightDetails!!.date!!, weightDetails.weight!!))
-                    recyclerViewAdapter.notifyDataSetChanged()
-                }
-                override fun onChildChanged(dataSnapshot: DataSnapshot, s: String?) {
+            override fun onChildAdded(dataSnapshot: DataSnapshot, s: String?) {
 
-                }
-                override fun onChildRemoved(dataSnapshot: DataSnapshot) {
+                val weightDetails = dataSnapshot.getValue(WeightDetails::class.java)
+                weightDetailsArrayList.add(WeightDetails(weightDetails!!.date!!, weightDetails.weight!!))
+                recyclerViewAdapter.notifyDataSetChanged()
+            }
+            override fun onChildChanged(dataSnapshot: DataSnapshot, s: String?) {
 
-                }
-                override fun onChildMoved(dataSnapshot: DataSnapshot, s: String?) {
+            }
+            override fun onChildRemoved(dataSnapshot: DataSnapshot) {
 
-                }
-                override fun onCancelled(databaseError: DatabaseError) {
+            }
+            override fun onChildMoved(dataSnapshot: DataSnapshot, s: String?) {
 
-                }
-            })
-            e(TAG, currentUser!!.displayName!!)
-            e(TAG,currentUser!!.uid)
+            }
+            override fun onCancelled(databaseError: DatabaseError) {
+
+            }
+        })
+        e(TAG, currentUser!!.displayName!!)
+        e(TAG,currentUser!!.uid)
     }
 }
-
-
-

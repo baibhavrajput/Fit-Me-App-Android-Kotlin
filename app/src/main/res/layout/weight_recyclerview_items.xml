@@ -3,34 +3,46 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="@drawable/nutrients_background"
+    android:layout_margin="4dp"
     android:weightSum="100">
 
     <TextView
         android:layout_weight="40"
         android:layout_margin="5dp"
         android:id="@+id/tvDate"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_width="0dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/main_color"
+        android:padding="8dp"
+        android:paddingStart="8dp"
+        />
 
     <TextView
         android:layout_weight="40"
         android:layout_margin="5dp"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:id="@+id/tvWeight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:paddingStart="8dp"
         />
 
     <TextView
         android:layout_weight="20"
         android:layout_margin="5dp"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="kg"
+        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/black"
         />
 
 

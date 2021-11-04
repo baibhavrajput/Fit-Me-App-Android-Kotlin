@@ -51,6 +51,7 @@ class WorkoutFragment : Fragment() {
         binding.viewPagerWorkout.adapter =
             ViewPagerAdapterWorkout(childFragmentManager, lifecycle, list)
 
+        binding.viewPagerWorkout.isSaveEnabled = false;
         TabLayoutMediator(binding.tabLayoutWorkout, binding.viewPagerWorkout) { tab, position ->
             tab.text = tabList[position]
         }.attach()
