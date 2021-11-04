@@ -4,12 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_baseline_logout_24.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/drawable/background_splash.xml" value="0.27314814814814814" />
+        <entry key="app/src/main/res/drawable/splash_background.xml" value="0.27314814814814814" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/activity_home2.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/activity_sign_in2.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/activity_sign_up2.xml" value="0.14488348530901723" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dashboard_recyclerview_items.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_about2.xml" value="0.14488348530901723" />
@@ -17,7 +20,7 @@
         <entry key="app/src/main/res/layout/fragment_back2.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_biceps.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_biceps2.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_chest.xml" value="0.13779128672745694" />
+        <entry key="app/src/main/res/layout/fragment_chest.xml" value="0.30248545742993127" />
         <entry key="app/src/main/res/layout/fragment_chest2.xml" value="0.13779128672745694" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_dashboard2.xml" value="0.13779128672745694" />
