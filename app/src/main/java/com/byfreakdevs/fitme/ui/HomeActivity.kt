@@ -151,6 +151,10 @@ class HomeActivity : AppCompatActivity() {
     private fun replaceFragment(fragment : Fragment){
         if(fragment != null){
             val transaction = supportFragmentManager.beginTransaction()
+
+            if (fragment !is DashboardFragment) {
+                transaction.addToBackStack(null)
+            }
             transaction.replace(R.id.fragmentContainerViewHome, fragment)
             transaction.commit()
         }
@@ -214,5 +218,9 @@ class HomeActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
 
     }
+    override fun onBackPressed() {
+            super.onBackPressed()
+    }
+
 
 }

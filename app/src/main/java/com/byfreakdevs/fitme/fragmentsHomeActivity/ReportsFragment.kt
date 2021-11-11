@@ -46,7 +46,8 @@ class ReportsFragment : Fragment() {
 
         val userReference = rootReference.child("Users").child(currentUser!!.uid)
 
-        userReference.child("nutritionDetails").orderByChild("calories").addValueEventListener(object : ValueEventListener {
+        userReference.child("nutritionDetails").orderByChild("calories")
+            .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     for (data in dataSnapshot.children) {
                         sumCalories = sumCalories?.plus(
@@ -59,114 +60,117 @@ class ReportsFragment : Fragment() {
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {}
-        })
+            })
 
-        userReference.child("nutritionDetails").orderByChild("carbohydrates").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (data in dataSnapshot.children) {
-                    sumCarbohydrates = sumCarbohydrates?.plus(
-                        data.child("carbohydrates")
-                            .getValue(Double::class.java)!!
-                    )
+        userReference.child("nutritionDetails").orderByChild("carbohydrates")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumCarbohydrates = sumCarbohydrates?.plus(
+                            data.child("carbohydrates")
+                                .getValue(Double::class.java)!!
+                        )
+                    }
+                    val rounded = String.format("%.2f", sumCarbohydrates)
+                    binding.tvCarbohydratesReports.text = rounded.toString()
                 }
-                val rounded = String.format("%.2f", sumCarbohydrates)
-                binding.tvCarbohydratesReports.text = rounded.toString()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
 
-        userReference.child("nutritionDetails").orderByChild("protein").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (data in dataSnapshot.children) {
-                    sumProtein = sumProtein?.plus(
-                        data.child("protein")
-                            .getValue(Double::class.java)!!
-                    )
+        userReference.child("nutritionDetails").orderByChild("protein")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumProtein = sumProtein?.plus(
+                            data.child("protein")
+                                .getValue(Double::class.java)!!
+                        )
+                    }
+                    val rounded = String.format("%.2f", sumProtein)
+                    binding.tvProteinReports.text = rounded.toString()
                 }
-                val rounded = String.format("%.2f", sumProtein)
-                binding.tvProteinReports.text = rounded.toString()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
 
-        userReference.child("nutritionDetails").orderByChild("fatsSaturated").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (data in dataSnapshot.children) {
-                    sumFatsSaturated = sumFatsSaturated?.plus(
-                        data.child("fatsSaturated")
-                            .getValue(Double::class.java)!!
-                    )
+        userReference.child("nutritionDetails").orderByChild("fatsSaturated")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumFatsSaturated = sumFatsSaturated?.plus(
+                            data.child("fatsSaturated")
+                                .getValue(Double::class.java)!!
+                        )
+                    }
+                    val rounded = String.format("%.2f", sumFatsSaturated)
+                    binding.tvSaturatedFatsReports.text = rounded.toString()
                 }
-                val rounded = String.format("%.2f", sumFatsSaturated)
-                binding.tvSaturatedFatsReports.text = rounded.toString()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
 
-        userReference.child("nutritionDetails").orderByChild("fiber").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (data in dataSnapshot.children) {
-                    sumFiber = sumFiber?.plus(
-                        data.child("fiber")
-                            .getValue(Double::class.java)!!
-                    )
+        userReference.child("nutritionDetails").orderByChild("fiber")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumFiber = sumFiber?.plus(
+                            data.child("fiber")
+                                .getValue(Double::class.java)!!
+                        )
+                    }
+                    val rounded = String.format("%.2f", sumFiber)
+                    binding.tvFiberReports.text = rounded.toString()
                 }
-                val rounded = String.format("%.2f", sumFiber)
-                binding.tvFiberReports.text = rounded.toString()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
 
-        userReference.child("nutritionDetails").orderByChild("cholesterol").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (data in dataSnapshot.children) {
-                    sumCholesterol = sumCholesterol?.plus(
-                        data.child("cholesterol")
-                            .getValue(Int::class.java)!!
-                    )
+        userReference.child("nutritionDetails").orderByChild("cholesterol")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumCholesterol = sumCholesterol?.plus(
+                            data.child("cholesterol")
+                                .getValue(Int::class.java)!!
+                        )
+                    }
+                    binding.tvCholesterolReports.text = sumCholesterol.toString()
                 }
-                binding.tvCholesterolReports.text = sumCholesterol.toString()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
 
-        userReference.child("nutritionDetails").orderByChild("sodium").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (data in dataSnapshot.children) {
-                    sumSodium = sumSodium?.plus(
-                        data.child("sodium")
-                            .getValue(Int::class.java)!!
-                    )
+        userReference.child("nutritionDetails").orderByChild("sodium")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumSodium = sumSodium?.plus(
+                            data.child("sodium")
+                                .getValue(Int::class.java)!!
+                        )
+                    }
+                    binding.tvSodiumReports.text = sumSodium.toString()
                 }
-                binding.tvSodiumReports.text = sumSodium.toString()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
 
-        userReference.child("nutritionDetails").orderByChild("sugar").addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (data in dataSnapshot.children) {
-                    sumSugar = sumSugar?.plus(
-                        data.child("sugar")
-                            .getValue(Double::class.java)!!
-                    )
+        userReference.child("nutritionDetails").orderByChild("sugar")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (data in dataSnapshot.children) {
+                        sumSugar = sumSugar?.plus(
+                            data.child("sugar")
+                                .getValue(Double::class.java)!!
+                        )
+                    }
+                    val rounded = String.format("%.2f", sumSugar)
+                    binding.tvSugarReports.text = rounded.toString()
                 }
-                val rounded = String.format("%.2f", sumSugar)
-                binding.tvSugarReports.text = rounded.toString()
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {}
-        })
-
-
-
-
+                override fun onCancelled(databaseError: DatabaseError) {}
+            })
     }
 
 

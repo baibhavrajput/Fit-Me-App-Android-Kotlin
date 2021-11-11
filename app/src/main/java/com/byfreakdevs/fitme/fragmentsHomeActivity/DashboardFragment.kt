@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,6 +43,7 @@ class DashboardFragment : Fragment() {
     private var sugar = 0.0
     private var name = ""
     private var sumCalories = 0.0
+    private var foodSearched = ""
 
     private lateinit var recyclerView: RecyclerView
     private var foodDetailsArrayList = ArrayList<FoodDetails>()
@@ -75,6 +77,9 @@ class DashboardFragment : Fragment() {
         val foodService = FoodService.getInstance()
         val foodRepository = FoodRepository(foodService)
 
+        val viewModel = ViewModelProvider(this , FoodViewModelFactory(foodRepository))
+            .get(FoodViewModel::class.java)
+
         binding.btDeleteDashboard.setOnClickListener {
 //            userReference.child("foodDetails").removeValue()
 //            userReference.child("nutritionDetails").removeValue()
@@ -103,15 +108,15 @@ class DashboardFragment : Fragment() {
 
         binding.btGetCaloriesDashboard.setOnClickListener {
 
-            val foodSearched = binding.etFoodDashboard.text.toString()
-
-            val viewModel = ViewModelProvider(this , FoodViewModelFactory(foodRepository))
-                .get(FoodViewModel::class.java)
-
+            foodSearched = binding.etFoodDashboard.text.toString()
             viewModel.getFood("$foodSearched")
+            binding.etFoodDashboard.text.clear()
 
-            viewModel.foodList.observe(viewLifecycleOwner , Observer { list ->
-
+        }
+        viewModel.foodList.observe(viewLifecycleOwner , Observer { list ->
+            if(list.isEmpty()){
+                Toast.makeText(activity , "Enter a valid name" , Toast.LENGTH_SHORT).show()
+            }else{
                 val item : Item = list[0]
                 calories = item.calories
                 carbohydrates = item.carbohydrates_total_g
@@ -128,12 +133,9 @@ class DashboardFragment : Fragment() {
 
                 userReference.child("nutritionDetails").push()
                     .setValue(NutritionDetails( calories , carbohydrates , protein , fatsSaturated , fiber , cholesterol , sodium , sugar))
+            }
+        })
 
-            })
-
-            binding.etFoodDashboard.text.clear()
-
-        }
         userReference.child("foodDetails").addChildEventListener(object : ChildEventListener {
 
             override fun onChildAdded(dataSnapshot: DataSnapshot, s: String?) {

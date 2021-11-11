@@ -22,7 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_back2.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_biceps.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_biceps2.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_chest.xml" value="0.29637305699481864" />
+        <entry key="app/src/main/res/layout/fragment_chest.xml" value="0.2594104308390023" />
         <entry key="app/src/main/res/layout/fragment_chest2.xml" value="0.13779128672745694" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_dashboard2.xml" value="0.13779128672745694" />
@@ -34,6 +34,7 @@
         <entry key="app/src/main/res/layout/fragment_reports2.xml" value="0.13779128672745694" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_share.xml" value="0.17481884057971014" />
+        <entry key="app/src/main/res/layout/fragment_shoulder.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_shoulder2.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_triceps.xml" value="0.14488348530901723" />
         <entry key="app/src/main/res/layout/fragment_triceps2.xml" value="0.14488348530901723" />

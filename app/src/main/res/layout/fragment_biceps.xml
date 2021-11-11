@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -23,17 +23,28 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="1. Flat barbell bench press"
-                android:background="@color/teal_200"
+                android:background="@color/main_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:fontFamily="@font/aldrich"/>
+                android:textColor="@color/white"
+                android:fontFamily="@font/aldrich"
+                />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in.Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -41,6 +52,7 @@
                 app:showYouTubeButton="true"
                 app:showFullScreenButton="true"
                 app:videoId="rT7DgCr-3pg"
+
                 />
 
             <TextView
@@ -51,11 +63,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="2. Flat dumbell bench press"
-                android:background="@color/teal_200"
+                android:background="@color/main_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in.Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view2"
@@ -79,11 +102,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="3. Incline barbell bench press "
-                android:background="@color/teal_200"
+                android:background="@color/main_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view3"
@@ -107,11 +141,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="4. Incline dumbell bench press"
-                android:background="@color/teal_200"
+                android:background="@color/main_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView141"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view4"
@@ -135,11 +180,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="5. Decline dumbell bench press"
-                android:background="@color/teal_200"
+                android:background="@color/main_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView142"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view5"
@@ -163,11 +219,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="6. Cable pec fly"
-                android:background="@color/teal_200"
+                android:background="@color/main_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView143"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view6"
@@ -191,11 +258,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="7. Machine pec fly"
-                android:background="@color/teal_200"
+                android:background="@color/main_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView144"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view7"

@@ -148,6 +148,17 @@ Bring the bar slowly down to your chest as you breathe in. Push up as you breath
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
 
+            <TextView
+                android:id="@+id/textView141"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view4"
                 android:layout_width="match_parent"
@@ -175,6 +186,17 @@ Bring the bar slowly down to your chest as you breathe in. Push up as you breath
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView142"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view5"
@@ -204,6 +226,17 @@ Bring the bar slowly down to your chest as you breathe in. Push up as you breath
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
 
+            <TextView
+                android:id="@+id/textView143"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view6"
                 android:layout_width="match_parent"
@@ -231,6 +264,17 @@ Bring the bar slowly down to your chest as you breathe in. Push up as you breath
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:id="@+id/textView144"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lie flat on your back on a bench.
+Grip the bar with hands just wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows. This allows for maximum force generation.
+Bring the bar slowly down to your chest as you breathe in. Push up as you breathe out, gripping the bar hard and watching a spot on the ceiling rather than the bar, so you can ensure it travels the same path every time."
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view7"
