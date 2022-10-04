@@ -2,7 +2,7 @@
 ##### (Screenshots attached below)
 
 ## Description
-**Fit Me** is an Android app developed for fitness enthusiasts and people under cretains medical condition to track their daily calorie intake as well as its macros and micros of the food they eat throughout the day. 
+**Fit Me** is an Android app developed for fitness enthusiasts and people under cretains medical condition to track their daily calorie intake as well as  macros and micros of the food they eat throughout the day. 
 
 ### Features -
 - Users can see track their daily calorie intake from Indian foods which is not available on any other app.
@@ -44,7 +44,7 @@ This app uses [***MVVM (Model View View-Model)***](https://developer.android.com
  
 
 
- ## Contact
+## Contact
 If you need any help, you can connect with me.
 
 Email - baibhavrajputt@gmail.com
