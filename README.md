@@ -31,10 +31,10 @@
   
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![](media/21.jpeg) | ![](media/22.jpeg) | ![](media/23.jpeg) | 
-| ![](media/24.jpeg) | ![](media/25.jpeg) | ![](media/26.jpeg) |
-| ![](media/27.jpeg) | ![](media/28.jpeg) | ![](media/29.jpeg) |
-| ![](media/31.jpeg) | ![](media/30.jpeg) | ![](media/32.jpeg) |
+| ![](media/22.jpeg) | ![](media/23.jpeg) | ![](media/24.jpeg) | 
+| ![](media/25.jpeg) | ![](media/26.jpeg) | ![](media/27.jpeg) |
+| ![](media/28.jpeg) | ![](media/29.jpeg) | ![](media/30.jpeg) |
+| ![](media/31.jpeg) | ![](media/21.jpeg) | ![](media/32.jpeg) |
 
 
 ## Architecture
