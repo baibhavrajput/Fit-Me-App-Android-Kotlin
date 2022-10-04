@@ -42,6 +42,15 @@ class ReportsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        sumCalories = 0.0
+        sumCarbohydrates = 0.0
+        sumProtein = 0.0
+        sumFatsSaturated = 0.0
+        sumFiber = 0.0
+        sumCholesterol = 0
+        sumSodium = 0
+        sumSugar = 0.0
+
         currentUser = FirebaseAuth.getInstance().currentUser
 
         val userReference = rootReference.child("Users").child(currentUser!!.uid)

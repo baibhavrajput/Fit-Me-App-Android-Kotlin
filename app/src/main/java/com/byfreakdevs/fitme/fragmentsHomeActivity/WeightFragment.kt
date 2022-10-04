@@ -55,6 +55,8 @@ class WeightFragment : Fragment() {
 //        firebaseAuth = FirebaseAuth.getInstance()
         FirebaseApp.initializeApp(requireContext())
 
+        weightDetailsArrayList.clear()
+
         recyclerView = binding.recyclerView
         etDate = binding.etDate
         btnSave = binding.btnSave
@@ -70,12 +72,24 @@ class WeightFragment : Fragment() {
         val userReference = rootReference.child("Users").child(currentUser!!.uid)
 
         btnSave.setOnClickListener {
+
             userReference.child("weightDetails").push()
                 .setValue(WeightDetails(etDate.text.toString(), etWeight.text.toString()))
 
             etWeight.text.clear()
             etDate.text.clear()
         }
+
+        getWeightDetailsFirebase()
+
+    }
+    private fun getWeightDetailsFirebase(){
+
+        val recyclerViewAdapter = WeightRecyclerViewAdapter(weightDetailsArrayList)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = recyclerViewAdapter
+
+        val userReference = rootReference.child("Users").child(currentUser!!.uid)
 
         userReference.child("weightDetails").addChildEventListener(object : ChildEventListener {
 
@@ -98,7 +112,5 @@ class WeightFragment : Fragment() {
 
             }
         })
-        e(TAG, currentUser!!.displayName!!)
-        e(TAG,currentUser!!.uid)
     }
 }

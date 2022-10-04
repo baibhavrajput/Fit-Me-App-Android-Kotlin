@@ -6,14 +6,14 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
 
-//const val API_KEY = "9zR7ZNct/Ts8KdtSpja42g==M6qKwwfDVRZhAxN1"
+//const val API_KEY = "FcLT1GX3XcRLoisohN1nFDUxUG3rXrNOQoErR9tP"
 //private const val BASE_URL = "https://api.calorieninjas.com/"
 
 
 interface FoodInstance {
 
-    @Headers("X-Api-Key: 9zR7ZNct/Ts8KdtSpja42g==Xl8G5gPcWcKJHjza")
-    @GET("/v1/nutrition")
+    @Headers("X-Api-Key: FcLT1GX3XcRLoisohN1nFDUxUG3rXrNOQoErR9tP")
+    @GET("/v1/nutrition?")
     suspend  fun getFoodNutrition(@Query("query") query : String) : Response<GetFood>
 }
 

@@ -21,7 +21,6 @@ class DashboardRecyclerViewAdapter (private val foodDetailsArrayList: ArrayList<
         val currentFood = foodDetailsArrayList[i]
         foodDetailsHolder.tvFood.text = currentFood.name
         foodDetailsHolder.tvCalories.text = currentFood.calories.toString()
-
     }
 
     override fun getItemCount(): Int {
@@ -34,5 +33,4 @@ class DashboardRecyclerViewAdapter (private val foodDetailsArrayList: ArrayList<
         var tvCalories: TextView = itemView.findViewById(R.id.tvCalories)
 
     }
-
 }

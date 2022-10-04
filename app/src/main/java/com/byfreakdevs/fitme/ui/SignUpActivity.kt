@@ -111,8 +111,4 @@ class SignUpActivity : AppCompatActivity() {
         database.child(userFirebaseId!!).child("userDetails").setValue(user)
 
     }
-
-
-
-
 }

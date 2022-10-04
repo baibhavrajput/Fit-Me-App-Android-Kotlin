@@ -13,15 +13,16 @@ class FoodViewModel(private val foodRepository: FoodRepository) : ViewModel() {
 
     fun getFood(foodName: String) {
         CoroutineScope(Dispatchers.IO).launch {
-
+            
             val response = foodRepository.getFood(foodName)
 
             withContext(Dispatchers.Main) {
-                if (response.isSuccessful) {
+                if (response.isSuccessful)
+                {
                     foodList.value = response.body()!!.items
                 }
-
-                else {
+                else
+                {
                     Log.d("baibhav", "error")
                 }
             }
